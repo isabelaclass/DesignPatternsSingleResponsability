@@ -17,14 +17,8 @@ The project consists of the following classes and responsibilities:
 3. **PurchProduct**  
    Associates a specific `Purch` with the products purchased and the quantities of each product. This class contains `purchId`, `productId`, and `quantity`.
 
-4. **ProductRepository**  
-   Handles all database operations related to `Product`, such as adding and retrieving products.
-
-5. **PurchRepository**  
-   Handles database operations for `Purch`, including saving purchases to the database.
-
-6. **PurchProductRepository**  
-   Manages database operations that associate `Purch` with `Product`, enabling tracking of products within each purchase.
+   **Inventory**
+   Represents the products in inventory.
 
 ## Database Configuration
 
@@ -38,19 +32,3 @@ This project uses **SQLite** as the database, allowing for straightforward data 
 ## UML Class
 
 ![Class Diagram](https://github.com/isabelaclass/DesignPatternsSingleResponsability/blob/main/singleresponsability.jpg)
-
-## Example Usage
-
-The main application connects to the database, then uses the repository classes to add, retrieve, and manipulate data in the database.
-
-```java
-// Creating a product and adding it to the database
-ProductRepository productRepo = new ProductRepository();
-Product product = new Product("Product A", 100.00, 20);
-productRepo.addProduct(product);
-
-// Creating a purchase and linking it with products
-PurchRepository purchRepo = new PurchRepository();
-Purch purch = new Purch("2024-11-10");
-purch.addPurchProduct(product);
-purchRepo.addPurch(purch);
