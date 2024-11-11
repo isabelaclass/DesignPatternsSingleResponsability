@@ -17,7 +17,7 @@ The project consists of the following classes and responsibilities:
 3. **PurchProduct**  
    Associates a specific `Purch` with the products purchased and the quantities of each product. This class contains `purchId`, `productId`, and `quantity`.
 
-   **Inventory**
+4. **Inventory**
    Represents the products in inventory.
 
 ## Database Configuration
