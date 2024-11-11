@@ -37,6 +37,8 @@ This project uses **SQLite** as the database, allowing for straightforward data 
 
 ## UML Class
 
+![Class Diagram](https://github.com/isabelaclass/DesignPatternsSingleResponsability/blob/main/singleresponsability.jpg)
+
 ## Example Usage
 
 The main application connects to the database, then uses the repository classes to add, retrieve, and manipulate data in the database.
