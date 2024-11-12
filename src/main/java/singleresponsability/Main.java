@@ -1,17 +1,25 @@
 package singleresponsability;
 
+import database.SQLiteData;
+
 public class Main {
 
     public static void main(String[] args) {
 
-        Product product_one = new Product(1, "rice", 3.45, 5);
-        Product product_two = new Product(2, "pen", 0.45, 15);
+        Product product_four = new Product(4, "Product D", 103.00, 10);
 
-        Inventory inventory = new Inventory();
+        SQLiteData sqliteData = new SQLiteData();
 
-        inventory.addNewProduct(product_one);
-        inventory.addNewProduct(product_two);
+        Inventory inventory = new Inventory(sqliteData);
+        InventoryProducts inventoryProducts = new InventoryProducts(sqliteData);
 
-        System.out.println("Inventory dateils: ");
+        if(!inventoryProducts.searchProductByCode(product_four.getCode()))
+        {
+            inventory.addNewProduct(product_four);
+        }
+        else
+        {
+            System.out.println("Product found: " + product_four.getName() + " - " + product_four.getPrice());
+        }
     }
 }

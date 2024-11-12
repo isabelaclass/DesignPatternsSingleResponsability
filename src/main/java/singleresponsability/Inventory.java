@@ -1,13 +1,17 @@
 package singleresponsability;
 
-import java.util.ArrayList;
-import java.util.List;
+import database.SQLiteData;
 
 public class Inventory {
 
-    List<Product> inventory_products = new ArrayList<Product>();
+    private SQLiteData sqliteData;
+
+    public Inventory(SQLiteData sqliteData) {
+        this.sqliteData = sqliteData;
+    }
 
     public void addNewProduct(Product product) {
-        inventory_products.add(product);
+        sqliteData.insertProduct(product.getCode(), product.getName(), product.getPrice(), product.getQuantity());
+        System.out.println("Product added to inventory: " + product.getName());
     }
 }

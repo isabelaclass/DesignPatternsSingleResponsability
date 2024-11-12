@@ -7,7 +7,7 @@ public class Product {
     double   price;
     int     quantity;
 
-   public Product(int code, String name, double price, int quantity) {
+    public Product(int code, String name, double price, int quantity) {
        this.code = code;
        this.name = name;
        this.price = price;
@@ -29,4 +29,9 @@ public class Product {
     public double getPrice() {
         return price;
     }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
 }
