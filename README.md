@@ -31,4 +31,4 @@ This project uses **SQLite** as the database, allowing for straightforward data 
 
 ## UML Class
 
-![Class Diagram]((https://github.com/isabelaclass/DesignPatternsSingleResponsability/blob/main/singleresponsabilityv2.jpg))
+![Class Diagram](https://github.com/isabelaclass/DesignPatternsSingleResponsability/blob/main/singleresponsabilityv2.jpg)
